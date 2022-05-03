@@ -9,22 +9,22 @@ public class Squirtle implements Type, Health, Attacks{
 
     @Override
     public String attack1() {
-        return null;
+        return "Tackle";
     }
 
     @Override
     public String attack2() {
-        return null;
+        return "Water Gun";
     }
 
     @Override
     public String attack3() {
-        return null;
+        return "Aqua Jet";
     }
 
     @Override
     public String attack4() {
-        return null;
+        return "Water Pulse";
     }
 
     @Override

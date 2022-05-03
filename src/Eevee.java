@@ -1,22 +1,25 @@
-public class Evee implements Health, Type, Attacks{
+public class Eevee implements Health, Type, Attacks{
+    public Eevee(String eevee) {
+    }
+
     @Override
     public String attack1() {
-        return null;
+        return "Tackle";
     }
 
     @Override
     public String attack2() {
-        return null;
+        return "Quick Attack";
     }
 
     @Override
     public String attack3() {
-        return null;
+        return "Body Slam";
     }
 
     @Override
     public String attack4() {
-        return null;
+        return "Last Resort";
     }
 
     @Override
@@ -26,6 +29,6 @@ public class Evee implements Health, Type, Attacks{
 
     @Override
     public String pokemonType() {
-        return null;
+        return "Normal";
     }
 }

@@ -1,22 +1,25 @@
 public class Tepig implements Health, Type, Attacks{
+    public Tepig(String tepig) {
+    }
+
     @Override
     public String attack1() {
-        return null;
+        return "Fire Spin";
     }
 
     @Override
     public String attack2() {
-        return null;
+        return "Flamethrower";
     }
 
     @Override
     public String attack3() {
-        return null;
+        return "Tackle";
     }
 
     @Override
     public String attack4() {
-        return null;
+        return "Flame Charge";
     }
 
     @Override
@@ -26,6 +29,6 @@ public class Tepig implements Health, Type, Attacks{
 
     @Override
     public String pokemonType() {
-        return null;
+        return "Fire";
     }
 }

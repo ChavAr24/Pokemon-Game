@@ -9,22 +9,22 @@ public class Charmander implements Type, Health, Attacks{
 
     @Override
     public String attack1() {
-        return null;
+        return "Scratch";
     }
 
     @Override
     public String attack2() {
-        return null;
+        return "Fire Blast";
     }
 
     @Override
     public String attack3() {
-        return null;
+        return "Flame Charge";
     }
 
     @Override
     public String attack4() {
-        return null;
+        return "Flamethrower";
     }
 
     @Override

@@ -9,22 +9,22 @@ public class Bulbasaur implements Type, Health, Attacks {
 
     @Override
     public String attack1() {
-        return null;
+        return "Razor Leaf";
     }
 
     @Override
     public String attack2() {
-        return null;
+        return "Wine Whip";
     }
 
     @Override
     public String attack3() {
-        return null;
+        return "Solar Beam";
     }
 
     @Override
     public String attack4() {
-        return null;
+        return "Tackle";
     }
 
     @Override
