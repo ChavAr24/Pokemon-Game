@@ -5,6 +5,9 @@ Name: Aryan Chavan
 Date: 2 May 2022
 Description:
  */
+
+import java.util.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,9 +22,20 @@ public class Main {
         String [] squirtleStats = {"Type: " + squirtle.pokemonType(), "Attacks: " + squirtle.attack1(), squirtle.attack2(), squirtle.attack3(), squirtle.attack4()};
         String [] bulbasaurStats = {"Type: " + bulbasaur.pokemonType(), "Attacks: " + bulbasaur.attack1(), bulbasaur.attack2(), bulbasaur.attack3(), bulbasaur.attack4()};
 
-        System.out.println("Pikachu:  " + Arrays.toString(pikachuStats));
-        System.out.println("Charmander:  " + Arrays.toString(charmaderStats));
-        System.out.println("Squirtle:  " + Arrays.toString(squirtleStats));
-        System.out.println("Bulbasaur:  " + Arrays.toString(bulbasaurStats));
+        Scanner sc = new Scanner(System.in);
+        String pokemon = sc.nextLine();
+        sc.close();
+        if (pokemon.equals("pikachu")) {
+            System.out.println("Pikachu:  " + Arrays.toString(pikachuStats));
+        }
+        else if (pokemon.equals("charmader")) {
+            System.out.println("Charmander:  " + Arrays.toString(charmaderStats));
+        }
+        else if (pokemon.equals("squirtle")) {
+            System.out.println("Squirtle:  " + Arrays.toString(squirtleStats));
+        }
+        else if (pokemon.equals("bulbasaur")) {
+            System.out.println("Bulbasaur:  " + Arrays.toString(bulbasaurStats));
+        }
     }
 }
