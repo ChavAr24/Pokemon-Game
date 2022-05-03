@@ -25,17 +25,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String pokemon = sc.nextLine();
         sc.close();
-        if (pokemon.equals("pikachu")) {
-            System.out.println("Pikachu:  " + Arrays.toString(pikachuStats));
-        }
-        else if (pokemon.equals("charmader")) {
-            System.out.println("Charmander:  " + Arrays.toString(charmaderStats));
-        }
-        else if (pokemon.equals("squirtle")) {
-            System.out.println("Squirtle:  " + Arrays.toString(squirtleStats));
-        }
-        else if (pokemon.equals("bulbasaur")) {
-            System.out.println("Bulbasaur:  " + Arrays.toString(bulbasaurStats));
+        switch (pokemon) {
+            case "pikachu" -> System.out.println("Pikachu:  " + Arrays.toString(pikachuStats));
+            case "charmader" -> System.out.println("Charmander:  " + Arrays.toString(charmaderStats));
+            case "squirtle" -> System.out.println("Squirtle:  " + Arrays.toString(squirtleStats));
+            case "bulbasaur" -> System.out.println("Bulbasaur:  " + Arrays.toString(bulbasaurStats));
         }
     }
 }
