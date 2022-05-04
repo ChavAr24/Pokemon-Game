@@ -1,4 +1,4 @@
-public class Tepig implements Health, Type, Attacks{
+public class Tepig implements Stats, Type, Attacks{
     public Tepig(String tepig) {
     }
 
@@ -8,8 +8,18 @@ public class Tepig implements Health, Type, Attacks{
     }
 
     @Override
+    public int attack1Damage() {
+        return 0;
+    }
+
+    @Override
     public String attack2() {
         return "Flamethrower";
+    }
+
+    @Override
+    public int attack2Damage() {
+        return 0;
     }
 
     @Override
@@ -18,12 +28,37 @@ public class Tepig implements Health, Type, Attacks{
     }
 
     @Override
+    public int attack3Damage() {
+        return 0;
+    }
+
+    @Override
     public String attack4() {
         return "Flame Charge";
     }
 
     @Override
+    public int attack4Damage() {
+        return 0;
+    }
+
+    @Override
     public int initHP() {
+        return 10000;
+    }
+
+    @Override
+    public int speed() {
+        return 0;
+    }
+
+    @Override
+    public int def() {
+        return 0;
+    }
+
+    @Override
+    public int attack() {
         return 0;
     }
 

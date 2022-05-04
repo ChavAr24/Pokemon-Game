@@ -1,4 +1,3 @@
 public interface Type {
-    public String pokemonType();
-
+    String pokemonType();
 }
