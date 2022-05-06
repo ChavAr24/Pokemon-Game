@@ -47,10 +47,6 @@ public class Pikachu implements Type, Stats, Attacks {
         return 140;
     }
 
-    @Override
-    public int initHP() {
-        return 10000;
-    }
 
     @Override
     public int speed() {

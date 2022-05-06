@@ -48,11 +48,6 @@ public class Charmander implements Type, Stats, Attacks{
     }
 
     @Override
-    public int initHP() {
-        return 10000;
-    }
-
-    @Override
     public int speed() {
         return 50;
     }

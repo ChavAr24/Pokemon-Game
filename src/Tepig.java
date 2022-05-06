@@ -43,11 +43,6 @@ public class Tepig implements Stats, Type, Attacks{
     }
 
     @Override
-    public int initHP() {
-        return 10000;
-    }
-
-    @Override
     public int speed() {
         return 0;
     }

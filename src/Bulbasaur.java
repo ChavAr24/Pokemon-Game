@@ -48,11 +48,6 @@ public class Bulbasaur implements Type, Stats, Attacks {
     }
 
     @Override
-    public int initHP() {
-        return 10000;
-    }
-
-    @Override
     public int speed() {
         return 45;
     }
