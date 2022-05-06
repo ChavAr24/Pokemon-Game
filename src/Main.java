@@ -28,15 +28,13 @@ public class Main {
 
 
     public static void main(String[] args) {
-	// write your code here
 
-
-        System.out.println( Arrays.toString(pikachuStats));
-        System.out.println( Arrays.toString(charmanderStats));
-        System.out.println( Arrays.toString(squirtleStats));
-        System.out.println( Arrays.toString(bulbasaurStats));
-        System.out.println( Arrays.toString(eeveeStats));
-        System.out.println( Arrays.toString(tepigStats));
+//        System.out.println( Arrays.toString(pikachuStats));
+//        System.out.println( Arrays.toString(charmanderStats));
+//        System.out.println( Arrays.toString(squirtleStats));
+//        System.out.println( Arrays.toString(bulbasaurStats));
+//        System.out.println( Arrays.toString(eeveeStats));
+//        System.out.println( Arrays.toString(tepigStats));
 
         int mode = getGameMode();
         if (mode == 1){
@@ -46,7 +44,8 @@ public class Main {
             printPokemonStats(player2);
         }
         else {
-            System.out.println("Playing Player vs computer");
+            String player = getPlayerPokemon();
+            printPokemonStats(player);
         }
 
     }
@@ -63,6 +62,7 @@ public class Main {
     }
 
     public static String getPlayerPokemon(){
+        System.out.println("Please Choose a Pokemon");
         String pokemon = sc.nextLine();
         return pokemon;
     }
