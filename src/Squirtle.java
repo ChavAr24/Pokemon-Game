@@ -14,7 +14,7 @@ public class Squirtle implements Type, Stats, Attacks{
 
     @Override
     public int attack1Damage() {
-        return 0;
+        return 70;
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Squirtle implements Type, Stats, Attacks{
 
     @Override
     public int attack2Damage() {
-        return 0;
+        return 120;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Squirtle implements Type, Stats, Attacks{
 
     @Override
     public int attack3Damage() {
-        return 0;
+        return 200;
     }
 
     @Override
@@ -44,7 +44,7 @@ public class Squirtle implements Type, Stats, Attacks{
 
     @Override
     public int attack4Damage() {
-        return 0;
+        return 90;
     }
 
     @Override

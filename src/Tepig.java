@@ -9,7 +9,7 @@ public class Tepig implements Stats, Type, Attacks{
 
     @Override
     public int attack1Damage() {
-        return 0;
+        return 275;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Tepig implements Stats, Type, Attacks{
 
     @Override
     public int attack2Damage() {
-        return 0;
+        return 350;
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Tepig implements Stats, Type, Attacks{
 
     @Override
     public int attack3Damage() {
-        return 0;
+        return 60;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Tepig implements Stats, Type, Attacks{
 
     @Override
     public int attack4Damage() {
-        return 0;
+        return 100;
     }
 
     @Override
