@@ -86,6 +86,8 @@ public class Main {
     }
 
     public static int getPlayerAttack(){
+        int playerAttack = 0;
+        playerAttack = sc.nextLine();
         return -1;
     }
 
@@ -110,6 +112,9 @@ public class Main {
             if (result == 1){
                 System.out.println("victory");
                 break;
+            }
+            else {
+                String attack = getPlayerAttack();
             }
         }
     }
