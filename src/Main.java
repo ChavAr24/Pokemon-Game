@@ -27,14 +27,8 @@ public class Main {
     static String [] tepigStats = {"Type: " + tepig.pokemonType(), "Attacks: " + tepig.attack1() + " " + tepig.attack1Damage(), tepig.attack2() + " " + tepig.attack2Damage(), tepig.attack3() + " " + tepig.attack3Damage(), tepig.attack4() + " " + tepig.attack4Damage(), " HP: " + Pokemon.initHP()};
 
 
+    // get the player vs computer working first and then we can work on the player vs player.
     public static void main(String[] args) {
-
-//        System.out.println( Arrays.toString(pikachuStats));
-//        System.out.println( Arrays.toString(charmanderStats));
-//        System.out.println( Arrays.toString(squirtleStats));
-//        System.out.println( Arrays.toString(bulbasaurStats));
-//        System.out.println( Arrays.toString(eeveeStats));
-//        System.out.println( Arrays.toString(tepigStats));
 
         int mode = getGameMode();
         if (mode == 1){
@@ -46,8 +40,85 @@ public class Main {
         else {
             String player = getPlayerPokemon();
             printPokemonStats(player);
+            String computer = getComputerPokemon();
+            printPokemonStats(computer);
+            String victor = pvcMatchStart(player, computer);        // player vs computer match start
         }
 
+    }
+
+    static String [] pikachuAttacks = {pikachu.attack1(), String.valueOf(pikachu.attack1Damage()), pikachu.attack2(), String.valueOf(pikachu.attack2Damage()), pikachu.attack3(), String.valueOf(pikachu.attack3Damage()), pikachu.attack4(), String.valueOf(pikachu.attack4Damage())};
+    static String [] charmanderAttacks = {charmander.attack1(), String.valueOf(charmander.attack1Damage()), charmander.attack2(), String.valueOf(charmander.attack2Damage()), charmander.attack3(), String.valueOf(charmander.attack3Damage()), charmander.attack4(), String.valueOf(charmander.attack4Damage())};
+    static String [] squirtleAttacks = {squirtle.attack1(), String.valueOf(squirtle.attack1Damage()), squirtle.attack2(), String.valueOf(squirtle.attack2Damage()), squirtle.attack3(), String.valueOf(squirtle.attack3Damage()), squirtle.attack4(), String.valueOf(squirtle.attack4Damage())};
+    static String [] bulbasaurAttacks = {bulbasaur.attack1(), String.valueOf(bulbasaur.attack1Damage()), bulbasaur.attack2(), String.valueOf(bulbasaur.attack2Damage()), bulbasaur.attack3(), String.valueOf(bulbasaur.attack3Damage()), bulbasaur.attack4(), String.valueOf(bulbasaur.attack4Damage())};
+    static String [] eeveeAttacks = {eevee.attack1(), String.valueOf(eevee.attack1Damage()), eevee.attack2(), String.valueOf(eevee.attack2Damage()), eevee.attack3(), String.valueOf(eevee.attack3Damage()), eevee.attack4(), String.valueOf(eevee.attack4Damage())};
+    static String [] tepigAttacks = {tepig.attack1(), String.valueOf(tepig.attack1Damage()), tepig.attack2(), String.valueOf(tepig.attack2Damage()), tepig.attack3(), String.valueOf(tepig.attack3Damage()), tepig.attack4(), String.valueOf(tepig.attack4Damage())};
+
+
+    public static String pvcMatchStart(String player, String computer){
+        int hpPlayer = 400;  // 400 for testing purposes
+        int hpComputer = 400; // 400 for testing purposes
+        String victor = null;
+        ArrayList<String> playerAttacks = new ArrayList<String>();
+
+        switch (player){
+            case "pikachu":
+                for (int i = 0; i < pikachuAttacks.length; i++){
+                    playerAttacks.add(pikachuAttacks[i]);
+                }
+            case "charmander":
+                for (int i = 0; i < charmanderAttacks.length; i++){
+                    playerAttacks.add(charmanderAttacks[i]);
+                }
+            case "bulbasaur":
+                for (int i = 0; i < bulbasaurAttacks.length; i++){
+                    playerAttacks.add(bulbasaurAttacks[i]);
+                }
+            case "squirtle":
+                for (int i = 0; i < squirtleAttacks.length; i++){
+                    playerAttacks.add(squirtleAttacks[i]);
+                }
+            case "tepig":
+                for (int i = 0; i < tepigAttacks.length; i++){
+                    playerAttacks.add(tepigAttacks[i]);
+                }
+            case "eevee":
+                for (int i = 0; i < eeveeAttacks.length; i++){
+                    playerAttacks.add(eeveeAttacks[i]);
+                }
+        }
+
+
+        while(hpComputer > 0 || hpPlayer > 0){      // while loop while the healths of both pokemons are greater than 0
+            if (hpComputer < 1 && hpPlayer > 0){
+                victor = player;
+                break;
+            }
+            else if (hpComputer > 0 && hpPlayer < 1){
+                victor = computer;
+                break;
+            }
+            System.out.println(player + " Attacks: \n" + playerAttacks);
+            String playerAttack = getPlayerAttack();
+            System.out.println(playerAttack + " was used"); // only for debugging
+            if (playerAttacks.contains(playerAttack)){
+                int attackDamagePosition = playerAttacks.indexOf(playerAttack);
+                int attackDamage = Integer.parseInt(playerAttacks.get(attackDamagePosition + 1));
+                hpComputer -= attackDamage;
+                System.out.println(attackDamage + " damage was done to " + computer);
+                System.out.println("Computer Health: " + hpComputer + "\nPlayer Health: " + hpPlayer);
+            }
+        }
+
+
+        return victor;
+    }
+
+    public static String getPlayerAttack(){
+        String attack = null;
+        System.out.println("Player input an attack:");
+        attack = sc.nextLine();
+        return attack;
     }
 
     public static void printPokemonStats(String x){
@@ -68,8 +139,14 @@ public class Main {
     }
 
     public static int getGameMode(){
-        System.out.println("Which mode would you like to play in\n1) Player vs Computer\n2) Player vs Player");
+        System.out.println("Which mode would you like to play in\n1) Player vs Player\n2) Player vs Computer");
         int modeInput = Integer.parseInt(sc.nextLine());
         return modeInput;
+    }
+    public static String getComputerPokemon(){
+        String [] pokemons = {"pikachu", "charmander", "tepig", "squirtle", "eevee", "bulbasaur"};
+        Random r = new Random();
+        String pokemon = pokemons[r.nextInt(pokemons.length)];
+        return pokemon;
     }
 }
