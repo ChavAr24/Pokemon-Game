@@ -7,6 +7,9 @@ Date: 2 May 2022
 Description:
  */
 
+// change the HP of all of the pokemons to 2000 with the current power levels.
+// hide players stats from other person in pvp.
+
 import java.util.*;
 
 public class Main {
@@ -36,15 +39,16 @@ public class Main {
 
         int mode = getGameMode();  // gets the gamemode weather it is going to be PvP or PvC
         if (mode == 1){  // player vs player
+            System.out.println(Arrays.toString(pokemons));
             String player1 = getPlayerPokemon();        // gets player1's pokemon
             String player2 = getPlayerPokemon();        // gets player2's pokemon
             printPokemonStats(player1);  // print stats
             printPokemonStats(player2);
-            // String victorpvp = pvpMatchStart(player1, player2);        // player vs computer match start
-            // String looserpvp = null;
-            // if (victorpvp.equals(player1)) looserpvp = player2;
-            // if (victorpvp.equals(player2)) looserpvp = player1;
-            // System.out.println(victorpvp + " has defeated " + looserpvp);
+            String victorpvp = pvpMatchStart(player1, player2);        // player vs computer match start
+            String looserpvp = null;
+            if (victorpvp.equals(player1)) looserpvp = player2;
+            if (victorpvp.equals(player2)) looserpvp = player1;
+            System.out.println(victorpvp + " has defeated " + looserpvp);
         }
         else {   // player vs computer
             String player = getPlayerPokemon();  // gets players pokemon
@@ -76,10 +80,139 @@ public class Main {
   static String [] eeveeAttackCP = {eevee.attack1(), eevee.attack2(), eevee.attack3(), eevee.attack4()};
   static String [] tepigAttackCP = {tepig.attack1(), tepig.attack2(), tepig.attack3(), tepig.attack4()};
 
+    public static String pvpMatchStart(String player1, String player2){  // player vs player match
+      int hpPlayer1 = 2000; // 400 for testing purposes
+      int hpPlayer2 = 2000; // 400 fro testing purposes
+      String victor = null;
+      ArrayList<String> player1Attacks = new ArrayList<String>();
+      ArrayList<String> player2Attacks = new ArrayList<String>();
+      
+      if ("pikachu".equals(player1)) {
+            for (int i = 0; i < pikachuAttacks.length; i++) {
+                player1Attacks.add(pikachuAttacks[i]);
+            }
+        }
+        else if ("charmander".equals(player1)) {
+            for (int i = 0; i < charmanderAttacks.length; i++) {;
+                player1Attacks.add(charmanderAttacks[i]);
+            }
+        }
+        else if ("bulbasaur".equals(player1)) {
+            for (int i = 0; i < bulbasaurAttacks.length; i++) {
+                player1Attacks.add(bulbasaurAttacks[i]);
+            }
+        }
+        else if ("squirtle".equals(player1)) {
+            for (int i = 0; i < squirtleAttacks.length; i++) {
+                player1Attacks.add(squirtleAttacks[i]);
+            }
+        }
+        else if ("tepig".equals(player1)) {
+            for (int i = 0; i < tepigAttacks.length; i++) {
+                player1Attacks.add(tepigAttacks[i]);
+            }
+        }
+        else if ("eevee".equals(player1)) {
+            for (int i = 0; i < eeveeAttacks.length; i++) {
+                player1Attacks.add(eeveeAttacks[i]);
+            }
+        }
+
+      if ("pikachu".equals(player2)) {
+            for (int i = 0; i < pikachuAttacks.length; i++) {
+                player2Attacks.add(pikachuAttacks[i]);
+            }
+        }
+        else if ("charmander".equals(player2)) {
+            for (int i = 0; i < charmanderAttacks.length; i++) {;
+                player2Attacks.add(charmanderAttacks[i]);
+            }
+        }
+        else if ("bulbasaur".equals(player2)) {
+            for (int i = 0; i < bulbasaurAttacks.length; i++) {
+                player2Attacks.add(bulbasaurAttacks[i]);
+            }
+        }
+        else if ("squirtle".equals(player2)) {
+            for (int i = 0; i < squirtleAttacks.length; i++) {
+                player2Attacks.add(squirtleAttacks[i]);
+            }
+        }
+        else if ("tepig".equals(player2)) {
+            for (int i = 0; i < tepigAttacks.length; i++) {
+                player2Attacks.add(tepigAttacks[i]);
+            }
+        }
+        else if ("eevee".equals(player2)) {
+            for (int i = 0; i < eeveeAttacks.length; i++) {
+                player2Attacks.add(eeveeAttacks[i]);
+            }
+        }
+
+        while(hpPlayer1 > 0 || hpPlayer2 > 0 || victor == null){
+          System.out.println("------------------------------------------------------------");
+          victor = getResult(hpPlayer1, hpPlayer2);
+            if (victor != null){
+              break;
+            }
+          // player1's turn to attack
+            System.out.println(player1 + " Attacks: \n" + player1Attacks + "\n ");
+            String player1Attack = getPlayerAttack();
+            if (player1Attacks.contains(player1Attack)){
+                System.out.println(player1Attack + " was used by " + player1 + "\n ");
+                int attackDamagePositionPlayer1 = player1Attacks.indexOf(player1Attack);
+                int attackDamagePlayer1 = Integer.parseInt(player1Attacks.get(attackDamagePositionPlayer1 + 1));
+                hpPlayer2 -= attackDamagePlayer1;
+                System.out.println(attackDamagePlayer1 + " damage was done to " + player2 + "\n ");
+                if (hpPlayer1 <= 0) hpPlayer1 = 0;
+                if (hpPlayer2 <= 0) hpPlayer2 = 0;
+                System.out.println("Player 1 Health: " + hpPlayer1 + "\nPlayer 2 Health: " + hpPlayer2 + "\n ");
+            }
+          
+            victor = getResult(hpPlayer1, hpPlayer2);
+            if (victor != null){
+              break;
+            }
+          
+            // player2's turn to attack
+          System.out.println(player2 + " Attacks: \n" + player2Attacks + "\n ");
+            String player2Attack = getPlayerAttack();
+            if (player2Attacks.contains(player2Attack)){
+                System.out.println(player2Attack + " was used by " + player2 + "\n ");
+                int attackDamagePositionPlayer2 = player2Attacks.indexOf(player2Attack);
+                int attackDamagePlayer2 = Integer.parseInt(player2Attacks.get(attackDamagePositionPlayer2 + 1));
+                hpPlayer1 -= attackDamagePlayer2;
+                System.out.println(attackDamagePlayer2 + " damage was done to " + player1 + "\n ");
+                if (hpPlayer1 <= 0) hpPlayer1 = 0;
+                if (hpPlayer2 <= 0) hpPlayer2 = 0;
+                System.out.println("Player 1 Health: " + hpPlayer1 + "\nPlayer 2 Health: " + hpPlayer2 + "\n ");
+            }
+        }
+      
+      victor = getResultPVP(hpPlayer1, hpPlayer2);
+        if (victor.equals("player1")) victor = player1;
+        else if (victor.equals("player2")) victor = player2;
+      
+        return victor;
+    }
+
+    public static String getResultPVP(int hp1, int hp2){
+      String victor = null;
+      if (hp2 < 1 && hp1 > 0){
+        victor = "player1";
+      }
+      else if (hp2 > 0 && hp1 < 1){
+        victor = "player2";
+      }
+      else {
+        victor = null;
+      }
+      return victor;
+    }
   
-    public static String pvcMatchStart(String player, String computer){
-        int hpPlayer = 400;  // 400 for testing purposes
-        int hpComputer = 400; // 400 for testing purposes
+    public static String pvcMatchStart(String player, String computer){  // player vs computer match
+        int hpPlayer = 2000;  // 400 for testing purposes
+        int hpComputer = 2000; // 400 for testing purposes
         String victor = null;
         ArrayList<String> playerAttacks = new ArrayList<String>();
         ArrayList<String> computerAttacks = new ArrayList<String>();
@@ -148,40 +281,26 @@ public class Main {
 
 
         while(hpComputer > 0 || hpPlayer > 0 || victor == null){      //  loop while the healths of both pokemons are greater than 0
-            // if (hpComputer < 1 && hpPlayer > 0){
-            //     victor = player;
-            //     break;
-            // }
-            // else if (hpComputer > 0 && hpPlayer < 1){
-            //     victor = computer;
-            //     break;
-            // }
+          System.out.println("------------------------------------------------------------");
             victor = getResult(hpPlayer, hpComputer);
             if (victor != null){
               break;
             }
 
             // players turn to attack
-            System.out.println(player + " Attacks: \n" + playerAttacks);
+            System.out.println(player + " Attacks: \n" + playerAttacks + "\n ");
             String playerAttack = getPlayerAttack();
             if (playerAttacks.contains(playerAttack)){
-                System.out.println(playerAttack + " was used by " + player);
+                System.out.println(playerAttack + " was used by " + player + "\n ");
                 int attackDamagePositionPlayer = playerAttacks.indexOf(playerAttack);
                 int attackDamagePlayer = Integer.parseInt(playerAttacks.get(attackDamagePositionPlayer + 1));
                 hpComputer -= attackDamagePlayer;
                 System.out.println(attackDamagePlayer + " damage was done to " + computer);
                 if (hpComputer <= 0) hpComputer = 0;
                 if (hpPlayer <= 0) hpPlayer = 0;
-                System.out.println("Computer Health: " + hpComputer + "\nPlayer Health: " + hpPlayer);
+                System.out.println("Computer Health: " + hpComputer + "\nPlayer Health: " + hpPlayer + "\n ");
             }
-            // if (hpComputer < 1 && hpPlayer > 0){
-            //     victor = player;
-            //     break;
-            // }
-            // else if (hpComputer > 0 && hpPlayer < 1){
-            //     victor = computer;
-            //     break;
-            // }
+          
             victor = getResult(hpPlayer, hpComputer);
             if (victor != null){
               break;
@@ -190,14 +309,14 @@ public class Main {
             // computer turn to attack
             String computerAttack = getComputerAttack(computer);
             if (playerAttacks.contains(playerAttack)){
-                System.out.println(computerAttack + " was used by " + computer);
+                System.out.println(computerAttack + " was used by " + computer + "\n ");
                 int attackDamagePositionComputer = computerAttacks.indexOf(computerAttack);
                 int attackDamageComputer = Integer.parseInt(computerAttacks.get(attackDamagePositionComputer + 1));
                 hpPlayer -= attackDamageComputer;
                 System.out.println(attackDamageComputer + " damage was done to " + player);
                 if (hpComputer <= 0) hpComputer = 0;
                 if (hpPlayer <= 0) hpPlayer = 0;
-                System.out.println("Computer Health: " + hpComputer + "\nPlayer Health: " + hpPlayer);
+                System.out.println("Computer Health: " + hpComputer + "\nPlayer Health: " + hpPlayer + "\n ");
             }
         }
 
@@ -260,9 +379,9 @@ public class Main {
         int modeInput = Integer.parseInt(sc.nextLine());
         return modeInput;
     }
-    public static String getComputerPokemon(){
-        String [] pokemons = {"pikachu", "charmander", "tepig", "squirtle", "eevee", "bulbasaur"};
 
+  static String [] pokemons = {"pikachu", "charmander", "tepig", "squirtle", "eevee", "bulbasaur"};
+    public static String getComputerPokemon(){ 
         String pokemon = pokemons[r.nextInt(pokemons.length)];
         return pokemon;
     }
