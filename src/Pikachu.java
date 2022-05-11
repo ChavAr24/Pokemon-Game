@@ -13,9 +13,7 @@ public class Pikachu implements Type, Stats, Attacks {
     }
 
     @Override
-    public int attack1Damage() {
-        return 75;  // for now have it be 15 later change it
-    }
+    public int attack1Damage() {return 100;}
 
     @Override
     public String attack2() {

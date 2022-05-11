@@ -24,17 +24,17 @@ public class Charmander implements Type, Stats, Attacks{
 
     @Override
     public int attack2Damage() {
-        return 300;
+        return 250;
     }
 
     @Override
     public String attack3() {
-        return "Flame Charge";
+        return "Cut";
     }
 
     @Override
     public int attack3Damage() {
-        return 275;
+        return 120;
     }
 
     @Override
@@ -44,7 +44,7 @@ public class Charmander implements Type, Stats, Attacks{
 
     @Override
     public int attack4Damage() {
-        return 350;
+        return 250;
     }
 
     @Override

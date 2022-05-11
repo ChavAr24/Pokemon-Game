@@ -29,7 +29,7 @@ public class Eevee implements Stats, Type, Attacks{
 
     @Override
     public int attack3Damage() {
-        return 150;
+        return 200;
     }
 
     @Override

@@ -1,7 +1,7 @@
 /*
 Name: Aryan Chavan
 Date: 2 May 2022
-Description:
+Description: A Pokemon Game
  */
 import java.util.*;
 
