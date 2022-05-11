@@ -31,8 +31,8 @@ public class Main {
     public static void main(String[] args) {
 
         int mode = getGameMode();  // gets the game mode weather it is going to be PvP or PvC
+        System.out.println(Arrays.toString(pokemons));
         if (mode == 1){  // player vs player
-            System.out.println(Arrays.toString(pokemons));
             String player1 = getPlayerPokemon();        // gets player1's pokemon
             String player2 = getPlayerPokemon();        // gets player2's pokemon
             printPokemonStats(player1);  // print stats
