@@ -1,4 +1,4 @@
-public class Charmander implements Type, Stats, Attacks{
+public class Charmander extends Pokemon{
     public Charmander(String charmander) {
     }
 

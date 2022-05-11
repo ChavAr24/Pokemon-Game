@@ -1,4 +1,4 @@
-public class Tepig implements Stats, Type, Attacks{
+public class Tepig extends Pokemon{
     public Tepig(String tepig) {
     }
 

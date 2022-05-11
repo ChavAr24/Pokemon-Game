@@ -1,4 +1,4 @@
-public class Bulbasaur implements Type, Stats, Attacks {
+public class Bulbasaur extends Pokemon {
     public Bulbasaur(String bulbasaur) {
     }
 

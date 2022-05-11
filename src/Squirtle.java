@@ -1,4 +1,4 @@
-public class Squirtle implements Type, Stats, Attacks{
+public class Squirtle extends Pokemon{
     public Squirtle(String squirtle) {
     }
 

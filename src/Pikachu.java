@@ -1,4 +1,4 @@
-public class Pikachu implements Type, Stats, Attacks {
+public class Pikachu extends Pokemon {
     public Pikachu(String pikachu) {
     }
 

@@ -1,4 +1,4 @@
-public class Eevee implements Stats, Type, Attacks{
+public class Eevee extends Pokemon {
     public Eevee(String eevee) {
     }
 
