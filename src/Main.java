@@ -185,9 +185,7 @@ public class Main {
             }
           
             victor = getResult(hpPlayer, hpComputer);
-            if (victor != null){
-              break;
-            }
+            if (victor != null) break;
           
             // computer turn to attack
             String computerAttack = getComputerAttack(computer);
