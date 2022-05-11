@@ -16,6 +16,8 @@ public class Main {
     static Bulbasaur bulbasaur = new Bulbasaur("Bulbasaur");
     static Eevee eevee = new Eevee("Eevee");
     static Tepig tepig = new Tepig("Tepig");
+    static Zubat zubat = new Zubat("Zubat");
+    static Mankey mankey = new Mankey("Mankey");
 
     // getting the stats of the Pokemon from the other classes and interfaces
     static String [] pikachuStats = {"Type: " + pikachu.pokemonType(), "Attacks: " + pikachu.attack1() + " " + pikachu.attack1Damage(), pikachu.attack2() + " " + pikachu.attack2Damage(), pikachu.attack3() + " " + pikachu.attack3Damage(), pikachu.attack4() + " " + pikachu.attack4Damage(), " HP: " + Pokemon.initHP()};
@@ -24,6 +26,8 @@ public class Main {
     static String [] bulbasaurStats = {"Type: " + bulbasaur.pokemonType(), "Attacks: " + bulbasaur.attack1() + " " + bulbasaur.attack1Damage(), bulbasaur.attack2() + " " + bulbasaur.attack2Damage(), bulbasaur.attack3() + " " + bulbasaur.attack3Damage(), bulbasaur.attack4() + " " + bulbasaur.attack4Damage(), " HP: " + Pokemon.initHP()};
     static String [] eeveeStats = {"Type: " + eevee.pokemonType(), "Attacks: " + eevee.attack1() + " " + eevee.attack1Damage(), eevee.attack2() + " " + eevee.attack2Damage(), eevee.attack3() + " " + eevee.attack3Damage(), eevee.attack4() + " " + eevee.attack4Damage(), " HP: " + Pokemon.initHP()};
     static String [] tepigStats = {"Type: " + tepig.pokemonType(), "Attacks: " + tepig.attack1() + " " + tepig.attack1Damage(), tepig.attack2() + " " + tepig.attack2Damage(), tepig.attack3() + " " + tepig.attack3Damage(), tepig.attack4() + " " + tepig.attack4Damage(), " HP: " + Pokemon.initHP()};
+    static String [] zubatStats = {"Type: " + zubat.pokemonType(), "Attacks: " + zubat.attack1() + " " + zubat.attack1Damage(), zubat.attack2() + " " + zubat.attack2Damage(), zubat.attack3() + " " + zubat.attack3Damage(), zubat.attack4() + " " + zubat.attack4Damage(), " HP: " + Pokemon.initHP()};
+    static String [] mankeyStats = {"Type: " + mankey.pokemonType(), "Attacks: " + mankey.attack1() + " " + mankey.attack1Damage(), mankey.attack2() + " " + mankey.attack2Damage(), mankey.attack3() + " " + mankey.attack3Damage(), mankey.attack4() + " " + mankey.attack4Damage(), " HP: " + Pokemon.initHP()};
 
     // get the player vs computer working first, and then we can work on the player vs player.
     public static void main(String[] args) {
@@ -61,6 +65,8 @@ public class Main {
     static String [] bulbasaurAttacks = {bulbasaur.attack1(), String.valueOf(bulbasaur.attack1Damage()), bulbasaur.attack2(), String.valueOf(bulbasaur.attack2Damage()), bulbasaur.attack3(), String.valueOf(bulbasaur.attack3Damage()), bulbasaur.attack4(), String.valueOf(bulbasaur.attack4Damage())};
     static String [] eeveeAttacks = {eevee.attack1(), String.valueOf(eevee.attack1Damage()), eevee.attack2(), String.valueOf(eevee.attack2Damage()), eevee.attack3(), String.valueOf(eevee.attack3Damage()), eevee.attack4(), String.valueOf(eevee.attack4Damage())};
     static String [] tepigAttacks = {tepig.attack1(), String.valueOf(tepig.attack1Damage()), tepig.attack2(), String.valueOf(tepig.attack2Damage()), tepig.attack3(), String.valueOf(tepig.attack3Damage()), tepig.attack4(), String.valueOf(tepig.attack4Damage())};
+    static String [] zubatAttacks = {zubat.attack1(), String.valueOf(zubat.attack1Damage()), zubat.attack2(), String.valueOf(zubat.attack2Damage()), zubat.attack3(), String.valueOf(zubat.attack3Damage()), zubat.attack4(), String.valueOf(zubat.attack4Damage())};
+    static String [] mankeyAttacks = {mankey.attack1(), String.valueOf(mankey.attack1Damage()), mankey.attack2(), String.valueOf(mankey.attack2Damage()), mankey.attack3(), String.valueOf(mankey.attack3Damage()), mankey.attack4(), String.valueOf(mankey.attack4Damage())};
 
   // only attack names of the attacks for each pokemon for the computer to choose from
     static String [] pikachuAttackCP = {pikachu.attack1(), pikachu.attack2(), pikachu.attack3(), pikachu.attack4()};
@@ -69,6 +75,8 @@ public class Main {
     static String [] bulbasaurAttackCP = {bulbasaur.attack1(), bulbasaur.attack2(), bulbasaur.attack3(), bulbasaur.attack4()};
     static String [] eeveeAttackCP = {eevee.attack1(), eevee.attack2(), eevee.attack3(), eevee.attack4()};
     static String [] tepigAttackCP = {tepig.attack1(), tepig.attack2(), tepig.attack3(), tepig.attack4()};
+    static String [] zubatAttackCP = {zubat.attack1(), zubat.attack2(), zubat.attack3(), zubat.attack4()};
+    static String [] mankeyAttackCP = {mankey.attack1(), mankey.attack2(), mankey.attack3(), mankey.attack4()};
 
     public static String pvpMatchStart(String player1, String player2){  // player vs player match
       int hpPlayer1 = 2000; // 400 for testing purposes
@@ -83,6 +91,8 @@ public class Main {
       else if ("squirtle".equals(player1)) Collections.addAll(player1Attacks, squirtleAttacks);
       else if ("tepig".equals(player1)) Collections.addAll(player1Attacks, tepigAttacks);
       else if ("eevee".equals(player1)) Collections.addAll(player1Attacks, eeveeAttacks);
+      else if ("zubat".equals(player1)) Collections.addAll(player1Attacks, zubatAttacks);
+      else if ("mankey".equals(player1)) Collections.addAll(player1Attacks, mankeyAttacks);
 
       if ("pikachu".equals(player2)) Collections.addAll(player2Attacks, pikachuAttacks);
       else if ("charmander".equals(player2)) Collections.addAll(player2Attacks, charmanderAttacks);
@@ -90,6 +100,8 @@ public class Main {
       else if ("squirtle".equals(player2)) Collections.addAll(player2Attacks, squirtleAttacks);
       else if ("tepig".equals(player2)) Collections.addAll(player2Attacks, tepigAttacks);
       else if ("eevee".equals(player2)) Collections.addAll(player2Attacks, eeveeAttacks);
+      else if ("zubat".equals(player2)) Collections.addAll(player2Attacks, zubatAttacks);
+      else if ("mankey".equals(player2)) Collections.addAll(player2Attacks, mankeyAttacks);
 
       while(true){
           System.out.println("------------------------------------------------------------");
@@ -154,6 +166,8 @@ public class Main {
         else if ("squirtle".equals(player)) Collections.addAll(playerAttacks, squirtleAttacks);
         else if ("tepig".equals(player)) Collections.addAll(playerAttacks, tepigAttacks);
         else if ("eevee".equals(player)) Collections.addAll(playerAttacks, eeveeAttacks);
+        else if ("zubat".equals(player)) Collections.addAll(playerAttacks, zubatAttacks);
+        else if ("mankey".equals(player)) Collections.addAll(playerAttacks, mankeyAttacks);
 
         if ("pikachu".equals(computer)) Collections.addAll(computerAttacks, pikachuAttacks);
         else if ("charmander".equals(computer)) Collections.addAll(computerAttacks, charmanderAttacks);
@@ -161,6 +175,8 @@ public class Main {
         else if ("squirtle".equals(computer)) Collections.addAll(computerAttacks, squirtleAttacks);
         else if ("tepig".equals(computer)) Collections.addAll(computerAttacks, tepigAttacks);
         else if ("eevee".equals(computer)) Collections.addAll(computerAttacks, eeveeAttacks);
+        else if ("zubat".equals(computer)) Collections.addAll(computerAttacks, zubatAttacks);
+        else if ("mankey".equals(computer)) Collections.addAll(computerAttacks, mankeyAttacks);
 
         while(true){      //  loop while the healths of both pokemon are greater than 0
           System.out.println("------------------------------------------------------------");
@@ -219,6 +235,8 @@ public class Main {
         else if(computer.equals("squirtle")) attack = squirtleAttackCP[(r.nextInt(squirtleAttackCP.length))];
         else if(computer.equals("tepig")) attack = tepigAttackCP[(r.nextInt(tepigAttackCP.length))];
         else if(computer.equals("eevee")) attack = eeveeAttackCP[(r.nextInt(eeveeAttackCP.length))];
+        else if(computer.equals("zubat")) attack = zubatAttackCP[(r.nextInt(zubatAttackCP.length))];
+        else if(computer.equals("mankey")) attack = mankeyAttackCP[(r.nextInt(mankeyAttackCP.length))];
         return attack;
     }
 
@@ -236,6 +254,8 @@ public class Main {
       else if (x.equals("bulbasaur")) System.out.println("Bulbasaur:  " + Arrays.toString(bulbasaurStats));
       else if (x.equals("eevee")) System.out.println("Eevee:  " + Arrays.toString(eeveeStats));
       else if (x.equals("tepig")) System.out.println("Tepig:  " + Arrays.toString(tepigStats));
+      else if (x.equals("zubat")) System.out.println("Zubat:  " + Arrays.toString(zubatStats));
+      else if (x.equals("mankey")) System.out.println("Mankey:  " + Arrays.toString(mankeyStats));
     }
 
     public static String getPlayerPokemon(){
@@ -248,6 +268,6 @@ public class Main {
         return Integer.parseInt(sc.nextLine());
     }
 
-    static String [] pokemons = {"pikachu", "charmander", "tepig", "squirtle", "eevee", "bulbasaur"};
+    static String [] pokemons = {"pikachu", "charmander", "tepig", "squirtle", "eevee", "bulbasaur", "zubat", "mankey"};
     public static String getComputerPokemon() {return pokemons[r.nextInt(pokemons.length)];}
 }
