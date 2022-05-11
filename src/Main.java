@@ -6,7 +6,6 @@ Description: A Pokemon Game
 import java.util.*;
 
 public class Main {
-
     static Scanner sc = new Scanner(System.in);  // scanner for getting all the inputs
     static Random r = new Random(); // random int for computers pokemon and attacks
 
@@ -26,10 +25,8 @@ public class Main {
     static String [] eeveeStats = {"Type: " + eevee.pokemonType(), "Attacks: " + eevee.attack1() + " " + eevee.attack1Damage(), eevee.attack2() + " " + eevee.attack2Damage(), eevee.attack3() + " " + eevee.attack3Damage(), eevee.attack4() + " " + eevee.attack4Damage(), " HP: " + Pokemon.initHP()};
     static String [] tepigStats = {"Type: " + tepig.pokemonType(), "Attacks: " + tepig.attack1() + " " + tepig.attack1Damage(), tepig.attack2() + " " + tepig.attack2Damage(), tepig.attack3() + " " + tepig.attack3Damage(), tepig.attack4() + " " + tepig.attack4Damage(), " HP: " + Pokemon.initHP()};
 
-
     // get the player vs computer working first, and then we can work on the player vs player.
     public static void main(String[] args) {
-
         int mode = getGameMode();  // gets the game mode weather it is going to be PvP or PvC
         System.out.println(Arrays.toString(pokemons));
         if (mode == 1){  // player vs player
@@ -66,12 +63,12 @@ public class Main {
     static String [] tepigAttacks = {tepig.attack1(), String.valueOf(tepig.attack1Damage()), tepig.attack2(), String.valueOf(tepig.attack2Damage()), tepig.attack3(), String.valueOf(tepig.attack3Damage()), tepig.attack4(), String.valueOf(tepig.attack4Damage())};
 
   // only attack names of the attacks for each pokemon for the computer to choose from
-  static String [] pikachuAttackCP = {pikachu.attack1(), pikachu.attack2(), pikachu.attack3(), pikachu.attack4()};
-  static String [] charmanderAttackCP = {charmander.attack1(), charmander.attack2(), charmander.attack3(), charmander.attack4()};
-  static String [] squirtleAttackCP = {squirtle.attack1(), squirtle.attack2(), squirtle.attack3(), squirtle.attack4()};
-  static String [] bulbasaurAttackCP = {bulbasaur.attack1(), bulbasaur.attack2(), bulbasaur.attack3(), bulbasaur.attack4()};
-  static String [] eeveeAttackCP = {eevee.attack1(), eevee.attack2(), eevee.attack3(), eevee.attack4()};
-  static String [] tepigAttackCP = {tepig.attack1(), tepig.attack2(), tepig.attack3(), tepig.attack4()};
+    static String [] pikachuAttackCP = {pikachu.attack1(), pikachu.attack2(), pikachu.attack3(), pikachu.attack4()};
+    static String [] charmanderAttackCP = {charmander.attack1(), charmander.attack2(), charmander.attack3(), charmander.attack4()};
+    static String [] squirtleAttackCP = {squirtle.attack1(), squirtle.attack2(), squirtle.attack3(), squirtle.attack4()};
+    static String [] bulbasaurAttackCP = {bulbasaur.attack1(), bulbasaur.attack2(), bulbasaur.attack3(), bulbasaur.attack4()};
+    static String [] eeveeAttackCP = {eevee.attack1(), eevee.attack2(), eevee.attack3(), eevee.attack4()};
+    static String [] tepigAttackCP = {tepig.attack1(), tepig.attack2(), tepig.attack3(), tepig.attack4()};
 
     public static String pvpMatchStart(String player1, String player2){  // player vs player match
       int hpPlayer1 = 2000; // 400 for testing purposes
@@ -79,7 +76,7 @@ public class Main {
       String victor;
       ArrayList<String> player1Attacks = new ArrayList<>();
       ArrayList<String> player2Attacks = new ArrayList<>();
-      
+
       if ("pikachu".equals(player1)) Collections.addAll(player1Attacks, pikachuAttacks);
       else if ("charmander".equals(player1)) player1Attacks.addAll(Arrays.asList(charmanderAttacks));
       else if ("bulbasaur".equals(player1)) Collections.addAll(player1Attacks, bulbasaurAttacks);
@@ -111,7 +108,7 @@ public class Main {
                 if (hpPlayer2 <= 0) hpPlayer2 = 0;
                 System.out.println("Player 1 Health: " + hpPlayer1 + "\nPlayer 2 Health: " + hpPlayer2 + "\n ");
             }
-          
+
             victor = getResult(hpPlayer1, hpPlayer2);
             if (victor != null) break;
 
@@ -143,7 +140,7 @@ public class Main {
       else victor = null;
       return victor;
     }
-  
+
     public static String pvcMatchStart(String player, String computer){  // player vs computer match
         int hpPlayer = 2000;  // 400 for testing purposes
         int hpComputer = 2000; // 400 for testing purposes
@@ -183,10 +180,9 @@ public class Main {
                 if (hpPlayer <= 0) hpPlayer = 0;
                 System.out.println("Computer Health: " + hpComputer + "\nPlayer Health: " + hpPlayer + "\n ");
             }
-          
             victor = getResult(hpPlayer, hpComputer);
             if (victor != null) break;
-          
+
             // computer turn to attack
             String computerAttack = getComputerAttack(computer);
             if (playerAttacks.contains(playerAttack)){
@@ -200,11 +196,10 @@ public class Main {
                 System.out.println("Computer Health: " + hpComputer + "\nPlayer Health: " + hpPlayer + "\n ");
             }
         }
-
         victor = getResult(hpPlayer, hpComputer);
         if (victor.equals("player")) victor = player;
         else if (victor.equals("computer")) victor = computer;
-      
+
         return victor;
     }
 
