@@ -1,0 +1,9 @@
+Ways to improve the game and more things that can be added to it:
+
+Use the Type of the pokemon to give it an advantage or a disadvantage
+    - Fire against Grass -> Fire Attacks do 10% more damage.
+Give each move a pp so that each move can be only used certain number of times.
+Add in different stadium types which affect the health or the damage by certain attacks or certain types of attacks.
+***Add more Pokémon.
+Maybe get rid of all interfaces except the type interface.
+Add more attacks to each pokemon.
