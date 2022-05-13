@@ -1,4 +1,4 @@
-public class Eevee implements Stats, Type, Attacks{
+public class Eevee extends Pokemon {
     public Eevee(String eevee) {
     }
 
@@ -29,7 +29,7 @@ public class Eevee implements Stats, Type, Attacks{
 
     @Override
     public int attack3Damage() {
-        return 150;
+        return 200;
     }
 
     @Override

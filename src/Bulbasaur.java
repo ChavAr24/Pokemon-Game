@@ -1,4 +1,4 @@
-public class Bulbasaur implements Type, Stats, Attacks {
+public class Bulbasaur extends Pokemon {
     public Bulbasaur(String bulbasaur) {
     }
 
@@ -14,7 +14,7 @@ public class Bulbasaur implements Type, Stats, Attacks {
 
     @Override
     public int attack1Damage() {
-        return 100;
+        return 125;
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Bulbasaur implements Type, Stats, Attacks {
 
     @Override
     public int attack2Damage() {
-        return 75;
+        return 150;
     }
 
     @Override
@@ -38,13 +38,11 @@ public class Bulbasaur implements Type, Stats, Attacks {
     }
 
     @Override
-    public String attack4() {
-        return "Tackle";
-    }
+    public String attack4() {return "Tackle";}
 
     @Override
     public int attack4Damage() {
-        return 90;
+        return 125;
     }
 
     @Override

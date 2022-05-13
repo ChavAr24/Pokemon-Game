@@ -1,11 +1,9 @@
-public class Tepig implements Stats, Type, Attacks{
+public class Tepig extends Pokemon{
     public Tepig(String tepig) {
     }
 
     @Override
-    public String attack1() {
-        return "Fire Spin";
-    }
+    public String attack1() {return "Fire Spin";}
 
     @Override
     public int attack1Damage() {
@@ -19,7 +17,7 @@ public class Tepig implements Stats, Type, Attacks{
 
     @Override
     public int attack2Damage() {
-        return 350;
+        return 300;
     }
 
     @Override
@@ -29,7 +27,7 @@ public class Tepig implements Stats, Type, Attacks{
 
     @Override
     public int attack3Damage() {
-        return 60;
+        return 100;
     }
 
     @Override
@@ -39,7 +37,7 @@ public class Tepig implements Stats, Type, Attacks{
 
     @Override
     public int attack4Damage() {
-        return 100;
+        return 150;
     }
 
     @Override

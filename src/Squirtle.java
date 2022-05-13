@@ -1,4 +1,4 @@
-public class Squirtle implements Type, Stats, Attacks{
+public class Squirtle extends Pokemon{
     public Squirtle(String squirtle) {
     }
 
@@ -14,7 +14,7 @@ public class Squirtle implements Type, Stats, Attacks{
 
     @Override
     public int attack1Damage() {
-        return 70;
+        return 100;
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Squirtle implements Type, Stats, Attacks{
 
     @Override
     public int attack2Damage() {
-        return 120;
+        return 175;
     }
 
     @Override
@@ -34,17 +34,15 @@ public class Squirtle implements Type, Stats, Attacks{
 
     @Override
     public int attack3Damage() {
-        return 200;
+        return 250;
     }
 
     @Override
-    public String attack4() {
-        return "Water Pulse";
-    }
+    public String attack4() {return "Water Pulse";}
 
     @Override
     public int attack4Damage() {
-        return 90;
+        return 140;
     }
 
     @Override
