@@ -4,7 +4,7 @@ public class Eevee extends Pokemon {
 
     @Override
     public String attack1() {
-        return "Tackle";
+        return "tackle";
     }
 
     @Override
@@ -14,7 +14,7 @@ public class Eevee extends Pokemon {
 
     @Override
     public String attack2() {
-        return "Quick Attack";
+        return "quickattack";
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Eevee extends Pokemon {
 
     @Override
     public String attack3() {
-        return "Body Slam";
+        return "bodyslam";
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Eevee extends Pokemon {
 
     @Override
     public String attack4() {
-        return "Last Resort";
+        return "lastresort";
     }
 
     @Override

@@ -3,7 +3,7 @@ public class Tepig extends Pokemon{
     }
 
     @Override
-    public String attack1() {return "Fire Spin";}
+    public String attack1() {return "firespin";}
 
     @Override
     public int attack1Damage() {
@@ -12,7 +12,7 @@ public class Tepig extends Pokemon{
 
     @Override
     public String attack2() {
-        return "Flamethrower";
+        return "flamethrower";
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Tepig extends Pokemon{
 
     @Override
     public String attack3() {
-        return "Tackle";
+        return "tackle";
     }
 
     @Override
@@ -32,7 +32,7 @@ public class Tepig extends Pokemon{
 
     @Override
     public String attack4() {
-        return "Flame Charge";
+        return "flamethrower";
     }
 
     @Override

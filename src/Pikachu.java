@@ -9,7 +9,7 @@ public class Pikachu extends Pokemon {
 
     @Override
     public String attack1() {
-        return "Iron tail";
+        return "irontail";
     }
 
     @Override
@@ -17,7 +17,7 @@ public class Pikachu extends Pokemon {
 
     @Override
     public String attack2() {
-        return "Thunder Bolt";
+        return "thunderbolt";
     }
 
     @Override
@@ -26,9 +26,7 @@ public class Pikachu extends Pokemon {
     }
 
     @Override
-    public String attack3() {
-        return "Thunder Shock";
-    }
+    public String attack3() {return "thundershock";}
 
     @Override
     public int attack3Damage() {
@@ -37,7 +35,7 @@ public class Pikachu extends Pokemon {
 
     @Override
     public String attack4() {
-        return "Quick Attack";
+        return "quickattack";
     }
 
     @Override

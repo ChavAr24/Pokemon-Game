@@ -9,7 +9,7 @@ public class Squirtle extends Pokemon{
 
     @Override
     public String attack1() {
-        return "Tackle";
+        return "tackle";
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Squirtle extends Pokemon{
 
     @Override
     public String attack2() {
-        return "Water Gun";
+        return "watergun";
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Squirtle extends Pokemon{
 
     @Override
     public String attack3() {
-        return "Aqua Jet";
+        return "aquajet";
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Squirtle extends Pokemon{
     }
 
     @Override
-    public String attack4() {return "Water Pulse";}
+    public String attack4() {return "waterpulse";}
 
     @Override
     public int attack4Damage() {

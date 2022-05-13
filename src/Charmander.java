@@ -9,7 +9,7 @@ public class Charmander extends Pokemon{
 
     @Override
     public String attack1() {
-        return "Scratch";
+        return "scratch";
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Charmander extends Pokemon{
 
     @Override
     public String attack2() {
-        return "Fire Blast";
+        return "fireblast";
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Charmander extends Pokemon{
 
     @Override
     public String attack3() {
-        return "Cut";
+        return "cut";
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Charmander extends Pokemon{
 
     @Override
     public String attack4() {
-        return "Flamethrower";
+        return "flamethrower";
     }
 
     @Override

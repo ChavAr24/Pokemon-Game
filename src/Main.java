@@ -156,7 +156,7 @@ public class Main {
     public static String pvcMatchStart(String player, String computer){  // player vs computer match
         int hpPlayer = 2000;  // 400 for testing purposes
         int hpComputer = 2000; // 400 for testing purposes
-        String victor = null;
+        String victor;
         ArrayList<String> playerAttacks = new ArrayList<>();
         ArrayList<String> computerAttacks = new ArrayList<>();
 
@@ -243,7 +243,7 @@ public class Main {
     public static String getPlayerAttack(){
         String attack;
         System.out.println("Player input an attack:");
-        attack = sc.nextLine();
+        attack = sc.nextLine().toLowerCase();
         return attack;
     }
 

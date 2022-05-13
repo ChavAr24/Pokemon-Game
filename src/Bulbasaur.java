@@ -9,7 +9,7 @@ public class Bulbasaur extends Pokemon {
 
     @Override
     public String attack1() {
-        return "Razor Leaf";
+        return "razorleaf";
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Bulbasaur extends Pokemon {
 
     @Override
     public String attack2() {
-        return "Vine Whip";
+        return "vinewhip";
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Bulbasaur extends Pokemon {
 
     @Override
     public String attack3() {
-        return "Solar Beam";
+        return "solarbeam";
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Bulbasaur extends Pokemon {
     }
 
     @Override
-    public String attack4() {return "Tackle";}
+    public String attack4() {return "tackle";}
 
     @Override
     public int attack4Damage() {
