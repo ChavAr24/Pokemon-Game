@@ -104,7 +104,7 @@ public class Main {
       else if ("mankey".equals(player2)) Collections.addAll(player2Attacks, mankeyAttacks);
 
       while(true){
-          System.out.println("------------------------------------------------------------");
+          System.out.println("-----------------------------------------------------------------");
           victor = getResult(hpPlayer1, hpPlayer2);
             if (victor != null) break;
           // player1's turn to attack
@@ -179,7 +179,7 @@ public class Main {
         else if ("mankey".equals(computer)) Collections.addAll(computerAttacks, mankeyAttacks);
 
         while(true){      //  loop while the healths of both pokemon are greater than 0
-          System.out.println("------------------------------------------------------------");
+          System.out.println("-----------------------------------------------------------------");
             victor = getResult(hpPlayer, hpComputer);
             if (victor != null) break;
 
