@@ -78,12 +78,63 @@ public class Main {
     static String [] zubatAttackCP = {zubat.attack1(), zubat.attack2(), zubat.attack3(), zubat.attack4()};
     static String [] mankeyAttackCP = {mankey.attack1(), mankey.attack2(), mankey.attack3(), mankey.attack4()};
 
+    static String [] stadiums = {"Electric", "Fire", "Water", "Grass", "Fighting", "Flying", "Normal"};
+    public static int getFinalHealth(int stdNum, String player){
+        int health = 2000;
+
+        if (player.equals("pikachu")){
+            if (stadiums[stdNum].equals(pikachu.pokemonType())) {
+                health = health + 200;
+            }
+        }
+        else if (player.equals("charmander")){
+            if (stadiums[stdNum].equals(charmander.pokemonType())) {
+                health = health + 200;
+            }
+        }
+        else if (player.equals("squirtle")){
+            if (stadiums[stdNum].equals(squirtle.pokemonType())) {
+                health = health + 200;
+            }
+        }
+        else if (player.equals("bulbasaur")){
+            if (stadiums[stdNum].equals(bulbasaur.pokemonType())) {
+                health = health + 200;
+            }
+        }
+        else if (player.equals("eevee")){
+            if (stadiums[stdNum].equals(eevee.pokemonType())) {
+                health = health + 200;
+            }
+        }
+        else if (player.equals("tepig")){
+            if (stadiums[stdNum].equals(tepig.pokemonType())) {
+                health = health + 200;
+            }
+        }
+        else if (player.equals("zubat")){
+            if (stadiums[stdNum].equals(zubat.pokemonType())) {
+                health = health + 200;
+            }
+        }
+        else if (player.equals("mankey")){
+            if (stadiums[stdNum].equals(mankey.pokemonType())) {
+                health = health + 200;
+            }
+        }
+        return health;
+    }
+
     public static String pvpMatchStart(String player1, String player2){  // player vs player match
       int hpPlayer1 = 2000; // 400 for testing purposes
       int hpPlayer2 = 2000; // 400 for testing purposes
       String victor;
       ArrayList<String> player1Attacks = new ArrayList<>();
       ArrayList<String> player2Attacks = new ArrayList<>();
+      int stadiumNum = r.nextInt(7);
+      hpPlayer1 = getFinalHealth(stadiumNum, player1);
+      hpPlayer2 = getFinalHealth(stadiumNum, player2);
+      System.out.println("-----------------------------------------------------------------\nStadium: " + stadiums[stadiumNum] + "\nHP " + player1 + ": " + hpPlayer1 + "\nHP " + player2 + ": " + hpPlayer2);
 
       if ("pikachu".equals(player1)) Collections.addAll(player1Attacks, pikachuAttacks);
       else if ("charmander".equals(player1)) player1Attacks.addAll(Arrays.asList(charmanderAttacks));

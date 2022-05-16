@@ -8,3 +8,7 @@ Add in different stadium types which affect the health or the damage by certain 
 Add more attacks to each pokemon.
 
 ** after the hp of a pokemon goes to 0 print a string "pokemon has fainted" before declaring the winner of the match
+
+currently in game:
+
+- the stadium gives a health boost instead of damage boost :: working.
