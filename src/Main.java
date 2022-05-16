@@ -82,45 +82,31 @@ public class Main {
     public static int getFinalHealth(int stdNum, String player){
         int health = 2000;
 
-        if (player.equals("pikachu")){
-            if (stadiums[stdNum].equals(pikachu.pokemonType())) {
-                health = health + 200;
-            }
-        }
-        else if (player.equals("charmander")){
-            if (stadiums[stdNum].equals(charmander.pokemonType())) {
-                health = health + 200;
-            }
-        }
-        else if (player.equals("squirtle")){
-            if (stadiums[stdNum].equals(squirtle.pokemonType())) {
-                health = health + 200;
-            }
-        }
-        else if (player.equals("bulbasaur")){
-            if (stadiums[stdNum].equals(bulbasaur.pokemonType())) {
-                health = health + 200;
-            }
-        }
-        else if (player.equals("eevee")){
-            if (stadiums[stdNum].equals(eevee.pokemonType())) {
-                health = health + 200;
-            }
-        }
-        else if (player.equals("tepig")){
-            if (stadiums[stdNum].equals(tepig.pokemonType())) {
-                health = health + 200;
-            }
-        }
-        else if (player.equals("zubat")){
-            if (stadiums[stdNum].equals(zubat.pokemonType())) {
-                health = health + 200;
-            }
-        }
-        else if (player.equals("mankey")){
-            if (stadiums[stdNum].equals(mankey.pokemonType())) {
-                health = health + 200;
-            }
+        switch (player) {
+            case "pikachu":
+                if (stadiums[stdNum].equals(pikachu.pokemonType())) health = health + 200;
+                break;
+            case "charmander":
+                if (stadiums[stdNum].equals(charmander.pokemonType())) health = health + 200;
+                break;
+            case "squirtle":
+                if (stadiums[stdNum].equals(squirtle.pokemonType())) health = health + 200;
+                break;
+            case "bulbasaur":
+                if (stadiums[stdNum].equals(bulbasaur.pokemonType())) health = health + 200;
+                break;
+            case "eevee":
+                if (stadiums[stdNum].equals(eevee.pokemonType())) health = health + 200;
+                break;
+            case "tepig":
+                if (stadiums[stdNum].equals(tepig.pokemonType())) health = health + 200;
+                break;
+            case "zubat":
+                if (stadiums[stdNum].equals(zubat.pokemonType())) health = health + 200;
+                break;
+            case "mankey":
+                if (stadiums[stdNum].equals(mankey.pokemonType())) health = health + 200;
+                break;
         }
         return health;
     }
@@ -134,7 +120,7 @@ public class Main {
       int stadiumNum = r.nextInt(7);
       hpPlayer1 = getFinalHealth(stadiumNum, player1);
       hpPlayer2 = getFinalHealth(stadiumNum, player2);
-      System.out.println("-----------------------------------------------------------------\nStadium: " + stadiums[stadiumNum] + "\nHP " + player1 + ": " + hpPlayer1 + "\nHP " + player2 + ": " + hpPlayer2);
+      System.out.println("-----------------------------------------------------------------\nStadium: " + stadiums[stadiumNum] + "\nHP1 " + player1 + ": " + hpPlayer1 + "\nHP2 " + player2 + ": " + hpPlayer2);
 
       if ("pikachu".equals(player1)) Collections.addAll(player1Attacks, pikachuAttacks);
       else if ("charmander".equals(player1)) player1Attacks.addAll(Arrays.asList(charmanderAttacks));
@@ -210,6 +196,11 @@ public class Main {
         String victor;
         ArrayList<String> playerAttacks = new ArrayList<>();
         ArrayList<String> computerAttacks = new ArrayList<>();
+        int stadiumNum = r.nextInt(7);
+        hpPlayer = getFinalHealth(stadiumNum, player);
+        hpComputer = getFinalHealth(stadiumNum, computer);
+        System.out.println("-----------------------------------------------------------------\nStadium: " + stadiums[stadiumNum] + "\nHP1 " + player + ": " + hpPlayer + "\nHP2 " + computer + ": " + hpComputer);
+
 
         if ("pikachu".equals(player)) Collections.addAll(playerAttacks, pikachuAttacks);
         else if ("charmander".equals(player)) Collections.addAll(playerAttacks, charmanderAttacks);
