@@ -59,4 +59,9 @@ public class Tepig extends Pokemon{
     public String pokemonType() {
         return "Fire";
     }
+
+    @Override
+    public String pokemonTypeDisadvantage() {
+        return "Water";
+    }
 }

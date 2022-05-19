@@ -31,7 +31,7 @@ public class Main {
 
     public static void main(String[] args) {
         int mode = getGameMode();  // gets the game mode weather it is going to be PvP or PvC
-        System.out.println(Arrays.toString(pokemons));  // prints the list of the pokemons in the console.
+        System.out.println(Arrays.toString(pokemons));  // prints the list of the Pokemon in the console.
         if (mode == 1){  // player vs player
             String player1 = getPlayerPokemon();        // gets player1's pokemon
             String player2 = getPlayerPokemon();        // gets player2's pokemon
@@ -57,7 +57,7 @@ public class Main {
 
     }
 
-    // attacks and their damages of the pokemons in list
+    // attacks and their damages of the Pokemon in list
     static String [] pikachuAttacks = {pikachu.attack1(),String.valueOf(pikachu.attack1Damage()), pikachu.attack2(), String.valueOf(pikachu.attack2Damage()), pikachu.attack3(), String.valueOf(pikachu.attack3Damage()), pikachu.attack4(), String.valueOf(pikachu.attack4Damage())};
     static String [] charmanderAttacks = {charmander.attack1(), String.valueOf(charmander.attack1Damage()), charmander.attack2(), String.valueOf(charmander.attack2Damage()), charmander.attack3(), String.valueOf(charmander.attack3Damage()), charmander.attack4(), String.valueOf(charmander.attack4Damage())};
     static String [] squirtleAttacks = {squirtle.attack1(), String.valueOf(squirtle.attack1Damage()), squirtle.attack2(), String.valueOf(squirtle.attack2Damage()), squirtle.attack3(), String.valueOf(squirtle.attack3Damage()), squirtle.attack4(), String.valueOf(squirtle.attack4Damage())};
@@ -289,7 +289,7 @@ public class Main {
         return attack;
     }
 
-    public static void printPokemonStats(String x){ // prints the pokemons stats based on which pokemon is chosen
+    public static void printPokemonStats(String x){ // prints the Pokemon stats based on which pokemon is chosen
       if (x.equals("pikachu")) System.out.println("Pikachu:  " + Arrays.toString(pikachuStats));
       else if (x.equals("charmander")) System.out.println("Charmander:  " + Arrays.toString(charmanderStats));
       else if (x.equals("squirtle")) System.out.println("Squirtle:  " + Arrays.toString(squirtleStats));
@@ -302,7 +302,7 @@ public class Main {
 
     public static String getPlayerPokemon(){ // takes user input for players pokemon
         System.out.println("Please Choose a Pokemon");
-        return sc.nextLine();
+        return sc.nextLine(); // xD
     }
 
     public static int getGameMode(){ // takes user input for the mode which the player want to play in

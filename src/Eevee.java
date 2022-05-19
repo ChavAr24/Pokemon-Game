@@ -61,4 +61,9 @@ public class Eevee extends Pokemon {
     public String pokemonType() {
         return "Normal";
     }
+
+    @Override
+    public String pokemonTypeDisadvantage() {
+        return "Fighting";
+    }
 }

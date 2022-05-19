@@ -8,6 +8,11 @@ public class Squirtle extends Pokemon{
     }
 
     @Override
+    public String pokemonTypeDisadvantage() {
+        return "Grass";
+    }
+
+    @Override
     public String attack1() {
         return "tackle";
     }

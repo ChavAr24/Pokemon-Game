@@ -36,4 +36,9 @@ public class Mankey extends Pokemon{
 
     @Override
     public String pokemonType() {return "Fighting";}
+
+    @Override
+    public String pokemonTypeDisadvantage() {
+        return "Flying";
+    }
 }

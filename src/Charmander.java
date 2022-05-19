@@ -8,6 +8,11 @@ public class Charmander extends Pokemon{
     }
 
     @Override
+    public String pokemonTypeDisadvantage() {
+        return "Water";
+    }
+
+    @Override
     public String attack1() {
         return "scratch";
     }
