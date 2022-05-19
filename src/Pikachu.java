@@ -8,6 +8,11 @@ public class Pikachu extends Pokemon {
     }
 
     @Override
+    public String pokemonTypeDisadvantage() {
+        return "Grass";
+    }
+
+    @Override
     public String attack1() {
         return "irontail";
     }

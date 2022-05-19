@@ -36,4 +36,9 @@ public class Zubat extends Pokemon{
 
     @Override
     public String pokemonType() {return "Flying";}
+
+    @Override
+    public String pokemonTypeDisadvantage() {
+        return "Fire";
+    } // temporarily fire as we don't have a type that makes zubat weak
 }

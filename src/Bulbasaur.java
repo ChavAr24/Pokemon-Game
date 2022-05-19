@@ -8,6 +8,11 @@ public class Bulbasaur extends Pokemon {
     }
 
     @Override
+    public String pokemonTypeDisadvantage() {
+        return "Fire";
+    }
+
+    @Override
     public String attack1() {
         return "razorleaf";
     }
