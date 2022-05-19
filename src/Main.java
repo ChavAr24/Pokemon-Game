@@ -82,29 +82,37 @@ public class Main {
         int health = 2000; // initial health of every pokemon
 
         switch (player) {
-            case "pikachu": // if stadium is electric then pikachu gets a health boost
+            case "pikachu": // if stadium is electric then pikachu gets a health boost else if the stadium is the same as the type of weakness it takes away some health
                 if (stadiums[stdNum].equals(pikachu.pokemonType())) health = health + 200;
+                else if (stadiums[stdNum].equals(pikachu.pokemonTypeDisadvantage())) health = health - 200;
                 break;
-            case "charmander": // if stadium is fire then charmander gets a health boost
+            case "charmander": // if stadium is fire then charmander gets a health boost else if the stadium is the same as the type of weakness it takes away some health
                 if (stadiums[stdNum].equals(charmander.pokemonType())) health = health + 200;
+                else if (stadiums[stdNum].equals(charmander.pokemonTypeDisadvantage())) health = health - 200;
                 break;
-            case "squirtle": // if stadium is water then squirtle gets a health boost
+            case "squirtle": // if stadium is water then squirtle gets a health boost else if the stadium is the same as the type of weakness it takes away some health
                 if (stadiums[stdNum].equals(squirtle.pokemonType())) health = health + 200;
+                else if (stadiums[stdNum].equals(squirtle.pokemonTypeDisadvantage())) health = health - 200;
                 break;
-            case "bulbasaur": // if stadium is grass then bulbasaur gets a health boost
+            case "bulbasaur": // if stadium is grass then bulbasaur gets a health boost else if the stadium is the same as the type of weakness it takes away some health
                 if (stadiums[stdNum].equals(bulbasaur.pokemonType())) health = health + 200;
+                else if (stadiums[stdNum].equals(bulbasaur.pokemonTypeDisadvantage())) health = health - 200;
                 break;
-            case "eevee": // if stadium is normal then eevee gets a health boost
+            case "eevee": // if stadium is normal then eevee gets a health boost else if the stadium is the same as the type of weakness it takes away some health
                 if (stadiums[stdNum].equals(eevee.pokemonType())) health = health + 200;
+                else if (stadiums[stdNum].equals(eevee.pokemonTypeDisadvantage())) health = health - 200;
                 break;
-            case "tepig": // if stadium is fire then tepig gets a health boost
+            case "tepig": // if stadium is fire then tepig gets a health boost else if the stadium is the same as the type of weakness it takes away some health
                 if (stadiums[stdNum].equals(tepig.pokemonType())) health = health + 200;
+                else if (stadiums[stdNum].equals(tepig.pokemonTypeDisadvantage())) health = health - 200;
                 break;
-            case "zubat": // if stadium is flying then zubat gets a health boost
+            case "zubat": // if stadium is flying then zubat gets a health boost else if the stadium is the same as the type of weakness it takes away some health
                 if (stadiums[stdNum].equals(zubat.pokemonType())) health = health + 200;
+                else if (stadiums[stdNum].equals(zubat.pokemonTypeDisadvantage())) health = health - 200;
                 break;
-            case "mankey": // if stadium is fighting then mankey gets a health boost
+            case "mankey": // if stadium is fighting then mankey gets a health boost else if the stadium is the same as the type of weakness it takes away some health
                 if (stadiums[stdNum].equals(mankey.pokemonType())) health = health + 200;
+                else if (stadiums[stdNum].equals(mankey.pokemonTypeDisadvantage())) health = health - 200;
                 break;
         }
         return health;  // returns the final health
